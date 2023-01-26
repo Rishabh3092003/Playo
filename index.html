@@ -1,93 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="Style.css">
-     <script src="Script.js"></script>
-     <title>Document</title>
-</head>
+	<meta charset="UTF-8">
+	<title>PLAYO</title>
+	<link rel="stylesheet" href="Styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="Script.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".profile .icon_wrap").click(function(){
+			  $(this).parent().toggleClass("active");
+			  $(".notifications").removeClass("active");
+			});
 
+			$(".notifications .icon_wrap").click(function(){
+			  $(this).parent().toggleClass("active");
+			   $(".profile").removeClass("active");
+			});
+
+			$(".show_all .link").click(function(){
+			  $(".notifications").removeClass("active");
+			  $(".popup").show();
+			});
+
+			$(".close").click(function(){
+			  $(".popup").hide();
+			});
+		});
+	</script>
+</head>
 <body>
 
-     <div class="topnav">
-          <input class="search" type="text" placeholder="Search..">
-          <a href="#hyy"><button class="search-button"><img src="image\icons8-search-24.png"></button> </a>
-
-          <div class="topmenu">
-               <a href="#user"><img src="image\icons8-user-48.png"></a>
-
-               <a href="#message"><img src="image\icons8-chat-message-48.png"></a>
-               <a href="#notification"><img src="image\icons8-alarm-48.png"></a>
-          </div>
-     </div>
-
-     <div class="w3-content w3-section" style="max-width:500px">
-          <img class="mySlides" src="image\sp1.jpg" height="450" width="1500">
-          <img class="mySlides" src="image\sp2.jpg" height="450" width="1500">
-          <script>onload=carousel();</script>
-     </div>
-
-     <p><!------------------footer-----------------></p>
-     <footer>
-          <div class="footer">
-
-               <div class="row">
-                    <div class="column left">
-                         <img class="logo1" src="image\plyayo.png" alt="#" />
-                         <ul class="social_icon">
-                              <li><a href="#"><i aria-hidden="true"><img src="image\icons8-facebook-48.png"></i></a>
-                              </li>
-                              <li><a href="#"><i aria-hidden="true"><img src="image\icons8-instagram-48.png"></i></a>
-                              </li>
-                              <li><a href="#"><i aria-hidden="true"><img
-                                                  src="image\icons8-twitter-circled-48.png"></i></a></li>
-                              <li><a href="#"><i aria-hidden="true"><img src="image\icons8-whatsapp-48.png"></i></a>
-                              </li>
-                         </ul>
+<div class="wrapper">
+  <div class="navbar">
+    <!------------------------SEARCH BOX------------------->
+    <div class="navbar_left">
+      <div class="logo">
+<input type="text" name="text" class="input" placeholder="Enter Location">
+      </div>
+    </div>
+<!---------------------------NOTIFICATION MENU------------------------>
+    <div class="navbar_right">
+      <div class="notifications">
+        <div class="icon_wrap"><i class="far fa-bell"></i></div>
+        
+        <div class="notification_dd">
+            <ul class="notification_ul">
+                <li class="">
+                  
+                    <div class="notify_data">
+                        <div class="title">
+                            Lorem, ipsum dolor.  
+                        </div>
+                        <div class="sub_title">
+                          Lorem ipsum dolor sit amet consectetur.
+                      </div>
                     </div>
-                    <div class="column middle">
-                         <h3>About Us</h3>
-                         <ul class="about_us">
-                              <li>Sasd ssdffg sfdsgfsg dfgfdh dsgdfhfdh fdgfdhd fhdfhfgjghjgh sdsgdfhgfjg sdgdfhgfhj .
-                              </li>
-
-                              <h3>
-                                   <center>Privacy Policy | Terms and Condition | FAQS</center>
-                              </h3>
-                              <font color="white">
-                                   <center>Ssdd</center>
-                              </font>
-                              <font color="white">
-                                   <center>Assss</center>
-                              </font>
-
-                         </ul>
+                  
+                </li>  
+                <li class="">
+                  
+                    <div class="notify_data">
+                        <div class="title">
+                            Lorem, ipsum dolor.  
+                        </div>
+                        <div class="sub_title">
+                          Lorem ipsum dolor sit amet consectetur.
+                      </div>
                     </div>
-                    <div class="column right">
-                         <h3>Contact Us</h3>
-                         <ul class="conta">
-                              <li>Email- abss@gmail.com<br>Address- <br>Chhindwara, MP.<br>Mobile No. 998131222554</li>
-                         </ul>
+                   
+                </li> 
+                <li class="">
+                  
+                    <div class="notify_data">
+                        <div class="title">
+                            Lorem, ipsum dolor.  
+                        </div>
+                        <div class="sub_title">
+                          Lorem ipsum dolor sit amet consectetur.
+                      </div>
                     </div>
-
-               </div>
-               <div class="copyright">
-                    <div class="container">
-                         <div class="row">
-
-                              <p>WELCOME</p>
-
-                         </div>
+                  
+                </li>  
+                <li class="">
+                   
+                    <div class="notify_data">
+                        <div class="title">
+                            Lorem, ipsum dolor.  
+                        </div>
+                        <div class="sub_title">
+                          Lorem ipsum dolor sit amet consectetur.
+                      </div>
                     </div>
+                  
+                </li> 
+                <li class="">
+                  
+                    <div class="notify_data">
+                        <div class="title">
+                            Lorem, ipsum dolor.  
+                        </div>
+                        <div class="sub_title">
+                          Lorem ipsum dolor sit amet consectetur.
+                      </div>
+                    </div>
+                </li> 
+                <li class="show_all">
+                    <p class="link">Show All Activities</p>
+                </li> 
+            </ul>
+        </div>   
+      </div>
+<!----------------------------------------------------------------------------------------------------------------->
+                <!--Profile-->
+      <div class="profile">
+        <div class="icon_wrap">
+          <img src="image/674659-modified.png" alt="profile_pic">
+          <span class="name">Aviiiiiiiiiii</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
 
+        <div class="profile_dd">
+          <ul class="profile_ul">
+            <li class="profile_li"><a class="profile" href="#"><span class="picon"><i class="fas fa-user-alt"></i>
+                </span>Profile</a>
+              <div class="btn">My Account</div>
+            </li>
+            <li><a class="address" href="#"><span class="picon"><i class="fas fa-map-marker"></i></span>My Activity</a></li>
+            <li><a class="settings" href="#"><span class="picon"><i class="fas fa-cog"></i></span>Settings</a></li>
+            <li><a class="logout" href="#"><span class="picon"><i class="fas fa-sign-out-alt"></i></span>Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  
+</div>
 
-               </div>
-          </div>
-     </footer>
+<!------------------------------ADS SLIDER--------------------------------------------->
+<div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="image\sp1.jpg" height="450" width="1500">
+    <img class="mySlides" src="image\sp2.jpg" height="450" width="1500">
+    <script>onload=carousel();</script>
+</div>
+
+<!------------------footer----------------->
+<footer>
+    <div class="footer">
+
+         <div class="row">
+              <div class="column left">
+                   <img class="logo1" src="image\plyayo.png" alt="#" />
+                   <ul class="social_icon">
+                        <li><a href="#"><i aria-hidden="true"><img src="/image/social media logo/insta.png"></i></a>
+                        </li>
+                        <li><a href="#"><i aria-hidden="true"><img src="image/social media logo/mail.png"></i></a>
+                        </li>
+                        <li><a href="#"><i aria-hidden="true"><img
+                                            src="image/social media logo/facebook_26px.png"></i></a></li>
+                        <li><a href="#"><i aria-hidden="true"><img src="image/social media logo/twitter_26px.png"></i></a>
+                        </li>
+                   </ul>
+              </div>
+              <div class="column middle">
+                   <h3>About Us</h3>
+                   <ul class="about_us">
+                        <li>Sasd ssdffg sfdsgfsg dfgfdh dsgdfhfdh fdgfdhd fhdfhfgjghjgh sdsgdfhgfjg sdgdfhgfhj .
+                        </li>
+
+                        <h3>
+                             <center>Privacy Policy | Terms and Condition | FAQS</center>
+                        </h3>
+                        <font color="white">
+                             <center>Ssdd</center>
+                        </font>
+                        <font color="white">
+                             <center>Assss</center>
+                        </font>
+
+                   </ul>
+              </div>
+              <div class="column right">
+                   <h3>Contact Us</h3>
+                   <ul class="conta">
+                        <li>Email- abss@gmail.com<br>Address- <br>Chhindwara, MP.<br>Mobile No. 998131222554</li>
+                   </ul>
+              </div>
+
+         </div>
+        
+
+         </div>
+    </div>
+</footer>
 
 </body>
-
 </html>
