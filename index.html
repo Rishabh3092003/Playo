@@ -28,15 +28,18 @@
 			  $(".popup").hide();
 			});
 		});
+
+    
 	</script>
+
 </head>
 <body>
 
-<div class="wrapper">
+<div class="Noti-fication">
   <div class="navbar">
     <!------------------------SEARCH BOX------------------->
     <div class="navbar_left">
-      <div class="logo">
+      <div class="site-logo">
 <input type="text" name="text" class="input" placeholder="Enter Location">
       </div>
     </div>
@@ -214,11 +217,22 @@
 </div>
 
 <!------------------------------ADS SLIDER--------------------------------------------->
-<div class="w3-content w3-section" style="max-width:500px">
-    <img class="mySlides" src="image\sp1.jpg" height="450" width="1500">
-    <img class="mySlides" src="image\sp2.jpg" height="450" width="1500">
-    <script>onload=carousel();</script>
-</div>
+
+  <div class="search">
+    <div class="select-btn">
+      <span>Select Country</span>
+      <i class="uil uil-angle-down"></i>
+    </div>
+    <div class="content">
+      <div class="search">
+        <i class="uil uil-search"></i>
+        <input spellcheck="false" type="text" placeholder="Search">
+      </div>
+      <ul class="options"></ul>
+    </div>
+  </div>
+  <script src="SearchBox.js"></script>
+
 
 <!------------------footer----------------->
 <footer>
