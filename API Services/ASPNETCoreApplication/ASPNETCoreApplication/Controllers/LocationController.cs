@@ -24,7 +24,7 @@ namespace ASPNETCoreApplication.Controllers
         [Route("GetCities")]
         public string GetCity(string key) 
         {
-            SqlConnection sqlConnection = new SqlConnection(configuration.GetConnectionString("PlayoConn").ToString());
+            SqlConnection sqlConnection = new SqlConnection(configuration.GetConnectionString("PlayoOnline").ToString());
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter($"SELECT * FROM M_CITY WHERE CITY LIKE '{key}%' ", sqlConnection);
             DataTable table = new DataTable();
             sqlDataAdapter.Fill(table);

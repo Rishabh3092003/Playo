@@ -4,7 +4,7 @@ const wrapper = document.querySelector(".wrapper"),
     options = wrapper.querySelector(".options");
     
     let Cities = [];
-
+    //This is our API method
     // Fetch the data from the API
     fetch('https://localhost:44370/api/Location/GetCities')
         .then(response => response.json())
