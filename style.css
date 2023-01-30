@@ -1,23 +1,41 @@
 /* Import Google Font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 body{
-  background: #4285f4;
+  background: transparent;
 }
+/*----------------------------Searchbox-------------------------*/
 ::selection{
   color: #fff;
   background: #4285f4;
 }
+.Homepage{
+  background-image: url(image/wallpaperflare.com_wallpaper\ \(3\).jpg);
+  padding-top: 50px;
+
+  width: 1515px; 
+height: 600px; 
+box-sizing: border-box;
+align-items: center;
+margin-bottom: 15%;
+justify-content: center;
+}
+
 .wrapper{
-  width: 340px;
-  margin: 80px auto 0;
-  margin-left: 300px;
-  margin-bottom: 50px;
+  width: 380px;
+  height: 100px;
+  margin: 170px auto 0;
+  margin-left: 500px;
+  margin-bottom: 60px;
+  position: relative;
 
 }
 .select-btn, li{
@@ -26,10 +44,10 @@ body{
   cursor: pointer;
 }
 .select-btn{
-  height: 65px;
-  width:600px;
-  padding: 0 200px;
-  padding-left:30px;
+  height: 60px;
+  width:400px;
+  padding: 0 100px;
+  padding-left:40px;
   font-size: 22px;
   background: #fff;
   border-radius: 7px;
@@ -39,6 +57,8 @@ body{
 .select-btn i{
   font-size: 31px;
   transition: transform 0.3s linear;
+  margin-left: 300px;
+  position: absolute;
 }
 .wrapper.active .select-btn i{
   transform: rotate(-180deg);
@@ -67,7 +87,7 @@ body{
   position: absolute;
 }
 .search input{
-  height: 50px;
+  height: 40px;
   width: 100%;
   outline: none;
   font-size: 17px;
@@ -84,7 +104,7 @@ body{
 }
 .content .options{
   margin-top: 10px;
-  max-height: 250px;
+  max-height: 200px;
   overflow-y: auto;
   padding-right: 7px;
 }
@@ -103,7 +123,7 @@ body{
   background: #b3b3b3;
 }
 .options li{
-  height: 50px;
+  height: 40px;
   padding: 0 13px;
   font-size: 21px;
 }
@@ -113,13 +133,15 @@ body{
 }
 
 
-/*-----------------------------------------------------------------------------------------------------------*/
-
+/*--------------------------------------------header---------------------------------------------------------------*/
 
 
 .Noti-fication{
   width: 100%;
-  height: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+ 
 }
 
 .navbar{
@@ -131,6 +153,7 @@ body{
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+
 }
 
 .navbar .navbar_left .logo a{
@@ -311,208 +334,137 @@ body{
 .navbar .notifications.active .notification_dd{
   display: block;
 }
+/*Button menu--------------------------------------------------------------------------*/
+.childbox {
+  width: 200px;
+  padding: 3%;
+  height: 140px;
+align-items: center;
+text-align:center;
+
+border-radius: 6px;
+transition: 0.3s ease-in-out;
+border-color: black;
+text-decoration: none;
+padding-left: 10px;
+justify-content: space-between;
+margin: 3px;
+}
+.childbox:hover{
+box-shadow: 0px 5px 15px gray;
+}
+
+.box-container {
+  display: flex;
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-bottom: 1%;
+  padding-right: 2%;
+
+}
+.box-container1 {
+  display: flex;
+  padding-left: 10%;
+  width: 90%;
+
+}
+.parent1 {
+  box-shadow: 0px 5px 15px gray;
+position:absolute;
+  width: 1300px; 
+  height: 370px; 
+  box-sizing: border-box;
+  background-color: white;
+justify-content: center;
+  margin-left: 8%;
+  margin-right: 20%;
+  margin-top: 10%;
+  border-radius: 20px;
+  margin-bottom: 500px;
+  }
+/*--------------------------------------------------------------*/
+
+
+
+
 
 /*-----------------------------footer---------------*/
-.footer {
-    background-color: #0b0b0b;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding-top: 65px;
-    text-align: center;
-    }
-    
-    .footer .titlepage {
-    text-align: left;
-    padding-bottom: 0px;
-    }
-    
-    .footer .titlepage h2 {
-    color: #fff;
-    margin: inherit;
-    border-bottom: #fff solid 1px;
-    }
-    
-    .logo1 {
-    float: left;
-    margin-top: -30px;
-    }
-    
-    ul.social_icon {
-    padding-top: 37px;
-    width: 100%;
-    float: left;
-    text-align: left;
-    }
-    
-    ul.social_icon li {
-    display: inline-block;
-    }
-    
-    ul.social_icon li a {
-    background: transparent;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    border-radius: 30px;
-    margin: 0 3px;
-    }
-    
-    
-    .footer h3 {
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 25px;
-    text-align: left;
-    color: #fff;
-    padding-bottom: 15px;
-    }
-    
-    .about_us li {
-    color: #fff;
-    font-size: 17px;
-    text-align: left;
-    }
-    
-    
-    .conta li {
-    color: #fff;
-    font-size: 17px;
-    text-align: left;
-    }
-    
-    .bottom_form h3 {
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 25px;
-    text-align: left;
-    color: #fff;
-    padding-bottom: 15px;
-    }
-    
-    .bottom_form .enter {
-    border: inherit;
-    padding: 0px 19px;
-    width: 100%;
-    height: 45px;
-    background: #fffffff2;
-    color: #ccc8c8;
-    font-size: 17px;
-    font-weight: 600;
-    float: left;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    }
-    
-    .sub_btn {
-    font-size: 17px;
-    transition: ease-in all 0.5s;
-    background-color: #48ca95;
-    color: #fff;
-    padding: 10px 0px;
-    max-width: 147px;
-    border-radius: 10px;
-    width: 100%;
-    display: block;
-    font-weight: 500;
-    text-transform: uppercase;
-    }
-    
-    .sub_btn:hover {
-    background-color: #000;
-    transition: ease-in all 0.5s;
-    color: #fff;
-    }
-    
-    .copyright {
-    margin-top: 80px;
-    padding-bottom: 20px;
-    }
-    
-    .copyright p {
-    color: #ddd;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    border-top: #ddd solid 1px;
-    padding-top: 25px;
-    font-weight: normal;
-    }
-    
-    .copyright a {
-    color: #ddd;
-    }
-    
-    .copyright a:hover {
-    color: #48ca95;
-    }
-    * {
-    box-sizing: border-box;
-    }
-    
-    /* Create three unequal columns that floats next to each other */
-    .column {
-    float: left;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-    }
-    
-    .left, .right {
-    width: 25%;
-    }
-    
-    .middle {
-    width: 50%;
-    }
-    
-    /* Clear floats after the columns */
-    .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    }
-    
-    /** end footer **/
-    /**heading**/
-    h6 {
-    letter-spacing: 0;
-    font-weight: normal;
-    position: relative;
-    padding: 0 0 10px 0;
-    font-weight: normal;
-    line-height: normal;
-    color: #111111;
-    margin: 0
-    }
-    
-    h1 {
-    font-size: 24px;
-    }
-    
-    h2 {
-    font-size: 22px;
-    }
-    
-    h3 {
-    font-size: 18px;
-    }
-    
-    h4 {
-    font-size: 16px
-    }
-    
-    h5 {
-    font-size: 14px
-    }
-    
-    h6 {
-    font-size: 13px
-    }
-    /** end heading**/   
-    /*------------------slider--------------*/
-    
-    .mySlides {display:none;}
-    
-  
+/*FOOTER*/
+footer {
+	margin-top: 500px;
+
+	color: #E5E8EF;
+	background: #000D;
+	padding: 50px 0; 
+}
+footer .footer-container {
+	max-width: 1300px;
+	margin: auto;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+}
+footer .social-media img{
+	margin-top: 5px;
+	width: 22px;
+}
+footer .logo {
+	width: 180px;
+	background: transparent;
+	color: #fff;
+}
+footer .social-media a{
+	margin-right: 10px;
+	font-size: 22px;
+	text-decoration: none;
+}
+footer .right-col h1{
+	font-size: 26px;
+}
+footer .border{
+	width: 100px;
+	height: 4px;
+	background: linear-gradient(to right, #FA4B37, #DF2771);
+	margin: 2px;
+}
+footer .newsletter-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+footer input::placeholder {
+  color: white !important;
+}
+footer .txtb {
+	flex: 1;
+	padding: 18px 40px;
+	font-size: 16px;
+	background: #343A40;
+	border: none;
+	font-weight: 700;
+	outline: none;
+	border-radius: 5px;
+	min-width: 260px;
+	margin-top: 20px;
+	color: white;
+}
+footer .btn {
+	margin-top: 20px;
+	padding: 18px 40px;
+	font-size: 16px;
+	color: #f1f1f1;
+	background: linear-gradient(to right, #FA4B37, #DF2771);
+	border: none;
+	font-weight: 700;
+	outline: none;
+	border-radius: 5px;
+	margin-left: 20px;
+	cursor: pointer;
+	transition: opacity .3s linear;	
+}
+footer .btn:hover {
+	opacity: .7;
+}
